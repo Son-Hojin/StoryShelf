@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryShelf</title>
+    <link rel="stylesheet" href="{% static "app_storyshelf/style.css" %}" type="text/css">
+</head>
+<body>
+    <div id="bk" class="marginModify" style="background-image: url('{%  static "app_storyshelf/img/book.jpg" %}');">
+        <p class="content_title">StoryShelf</p>
+        <div class="readBtn imgBtn ">
+            <a href="/app_storyshelf/read">
+                <img class="Btnimg " src="{% static "app_storyshelf/img/read.png" %}">
+            </a>
+        </div>
+        
+        <div class="writeBtn imgBtn">
+            <a href="/app_storyshelf/write">
+                <img class="Btnimg" src="{% static "app_storyshelf/img/write.png" %}">
+            </a>
+        </div>
+        <p class="quote_content">"{{ saying }}"</p>
+        <p class="quote_writer">-{{ author }}-</p>
+        
+       
+    </div>
+</body>
+</html>

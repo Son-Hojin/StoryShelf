@@ -1,0 +1,13 @@
+{% extends 'app_storyshelf/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container" >
+    <form class = "s-co-md" action="{% url 'write' %}" method ="post" style="margin-top: 50px">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_table }}
+        </div>
+        <input type="submit" class="btn btn-dark beamin" value="저장"/>
+    </form>
+</div>
+{% endblock %}
